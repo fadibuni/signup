@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Norse";
+  src:
+    url("fonts/Norse.woff2") format("woff2"),
+    url("fonts/Norse.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Norse";
+  src:
+    url("fonts/Norse-Bold.woff2") format("woff2"),
+    url("fonts/Norse-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#left-side {
+  width: max(100vw, 700px);
+  height: 100%;
+  background-image: url(images/plants.jpg);
+  background-size: cover;
+  position: relative;
+  font-family: sans-serif;
+}
+
+#odin {
+  margin-top: 10rem;
+  background-color: rgb(0 0 0 / 50%);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#odin img {
+ width: max(15%, 100px);
+  height: 100%;
+  object-fit: contain;
+}
+
+#odin span {
+  color: white;
+  font-family: Norse;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+#left-side > span {
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+}
+
+#left-side > span > a{
+  color: white
+}
+
+#right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+#right-side > div {
+  flex: 1;
+}
+#upper-right {
+  font-size: clamp(2rem, 50%, 2.5rem);
+  padding-top: 10rem;
+  background-color: #f5f5f5;
+}
+
+#upper-right p {
+  margin-bottom: 1rem;
+  text-wrap: wrap;
+}
+
+#middle-right {
+  height: min(30%, 300px);
+  margin-bottom: 1rem;
+}
+
+#middle-right h2 {
+  color: black;
+  margin-bottom: 2rem;
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#form div {
+  width: 45%;
+}
+#form div:focus input {
+  border: 2px solid green;
+}
+input {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  height: 30px;
+  margin: 10px 0;
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+input:focus {
+  outline: none;
+  border-color: blue;
+}
+.padding {
+  padding: 2rem;
+}
+
+#bottom-right {
+  padding-bottom: 0;
+  background-color: #f5f5f5;
+}
+#bottom-right button {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #586e42;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#bottom-right a {
+  color: #596d48;
+  text-decoration: none;
+}
+
+#bottom-right button:hover {
+  background-color: hsl(87, 5%, 42%);
+  cursor: pointer;
+}
+
+#bottom-right a:hover {
+  color: hsl(87, 5%, 42%);
+  cursor: pointer;
+}
